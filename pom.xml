@@ -18,6 +18,8 @@
 
     <modules>
         <module>reserva</module>
+        <module>pedido</module>
+
     </modules>
 
     <properties>

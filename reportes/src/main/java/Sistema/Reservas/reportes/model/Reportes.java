@@ -21,7 +21,7 @@ public class Reporte {
     private String tipo; // Ej: "VENTAS", "RESERVAS", "STOCK"
 
     @NotNull(message = "La fecha de generación es obligatoria")
-    private LocalDateTime fechaGeneracion;
+    private LocalDateTime fechaGeneracion; //La fecha que se generó el reporte
 
     @Column(columnDefinition = "TEXT")
     private String contenido; // Aquí podrías guardar un resumen en texto o JSON

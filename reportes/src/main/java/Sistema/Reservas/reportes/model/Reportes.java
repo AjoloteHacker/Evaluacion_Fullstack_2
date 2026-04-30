@@ -8,26 +8,26 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "reportes")
 @Data
-public class Reporte {
+public class Reportes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "El nombre del reporte es obligatorio")
-    private String nombre; // Ej: "Reporte Mensual de Ventas"
+    @NotBlank (message = "El nombre del reporte es obligatorio")
+    private String nombre;
 
-    @NotBlank(message = "El tipo de reporte no puede estar vacío")
-    private String tipo; // Ej: "VENTAS", "RESERVAS", "STOCK"
+    @NotBlank (message = "El tipo de reporte no puede estar vacío")
+    private String tipo;
 
-    @NotNull(message = "La fecha de generación es obligatoria")
-    private LocalDateTime fechaGeneracion; //La fecha que se generó el reporte
+    @NotNull (message = "La fecha de generación es obligatoria")
+    private LocalDateTime fechaGeneracion;
 
-    @Column(columnDefinition = "TEXT")
-    private String contenido; // Aquí podrías guardar un resumen en texto o JSON
+    @Column (columnDefinition = "TEXT")
+    private String contenido; // Aqui se puede guardar un resumen en texto o JSON
 
     @NotBlank(message = "Debe indicar el autor del reporte")
-    private String generadoPor; // Usuario que solicitó el reporte
+    private String generadoPor; //Usuario que solicitó el reporte
 
     @PrePersist
     protected void onCreate() {

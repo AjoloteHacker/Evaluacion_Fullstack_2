@@ -11,5 +11,5 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
     List<Pedido> findByClienteId(Long clienteId);
 
     // Búsqueda por reserva para saber que sse pidió en esa mesa
-    List<Pedido> findByreservaId(Long reservaId);
+    List<Pedido> findByReservaId(Long reservaId);
 }

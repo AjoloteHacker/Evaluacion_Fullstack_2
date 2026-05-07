@@ -20,6 +20,11 @@ public class ReportesService {
         return reportesRepository.findAll();
     }
 
+    public List <Reportes> obtenerPorTipo(String tipo){
+        log.info("Buscando reportes de tipo: {}", tipo);
+        return reportesRepository.findByTipo(tipo);
+    }
+
     public Reportes crearReporte(Reportes reporte){
         log.info("Generando nuevo reporte tipo: {} por el usuario: {}",
                 reporte.getTipo(), reporte.getGeneradoPor());
